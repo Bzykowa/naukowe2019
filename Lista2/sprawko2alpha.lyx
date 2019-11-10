@@ -3369,7 +3369,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3391,7 +3391,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 1.0000000000000007
 \end_layout
 
@@ -3400,7 +3400,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3411,7 +3411,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3433,7 +3433,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 9.99999999999998
 \end_layout
 
@@ -3442,7 +3442,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3453,7 +3453,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3475,7 +3475,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 1000.0000000000089
 \end_layout
 
@@ -3484,7 +3484,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3495,7 +3495,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3517,7 +3517,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 9.999999993366444*10
 \begin_inset Formula $^{6}$
 \end_inset
@@ -3530,7 +3530,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3541,7 +3541,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3563,7 +3563,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 9.9993293808524*10
 \begin_inset Formula $^{11}$
 \end_inset
@@ -3576,7 +3576,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3587,7 +3587,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5
 \end_layout
 
@@ -3605,7 +3605,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 5.668621505285428*10
 \begin_inset Formula $^{15}$
 \end_inset
@@ -3618,7 +3618,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 4
 \end_layout
 
@@ -3629,7 +3629,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3651,7 +3651,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 1.0000000000000009
 \end_layout
 
@@ -3660,7 +3660,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3671,7 +3671,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3693,7 +3693,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10.000000000000014
 \end_layout
 
@@ -3702,7 +3702,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3713,7 +3713,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3735,7 +3735,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 1000.0000000000537
 \end_layout
 
@@ -3744,7 +3744,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3755,7 +3755,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3777,7 +3777,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 9.999999998237088*10
 \begin_inset Formula $^{6}$
 \end_inset
@@ -3790,7 +3790,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3801,7 +3801,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3823,7 +3823,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 9.999112458768989*10
 \begin_inset Formula $^{11}$
 \end_inset
@@ -3836,7 +3836,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3847,7 +3847,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10
 \end_layout
 
@@ -3865,7 +3865,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 1.0162651221978986*10
 \begin_inset Formula $^{16}$
 \end_inset
@@ -3878,7 +3878,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 9
 \end_layout
 
@@ -3889,7 +3889,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -3911,7 +3911,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 1.0000000000000013
 \end_layout
 
@@ -3920,7 +3920,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -3931,7 +3931,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -3953,7 +3953,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 10.000000000000005
 \end_layout
 
@@ -3962,7 +3962,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -3973,7 +3973,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -3995,7 +3995,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 999.9999999999737
 \end_layout
 
@@ -4004,7 +4004,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -4015,7 +4015,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -4037,7 +4037,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 1.0000000006275691*10
 \begin_inset Formula $^{7}$
 \end_inset
@@ -4050,7 +4050,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -4061,7 +4061,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -4083,7 +4083,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 1.0000824146741567*10
 \begin_inset Formula $^{12}$
 \end_inset
@@ -4096,7 +4096,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -4107,7 +4107,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 20
 \end_layout
 
@@ -4125,7 +4125,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 8.635757378668062*10
 \begin_inset Formula $^{15}$
 \end_inset
@@ -4138,7 +4138,7 @@ rank(A)
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout 
 19
 \end_layout
 
@@ -7879,6 +7879,197 @@ Najszybciej wyniki zaczęły się znacząco różnić dla trzeciego eksperymentu
 
 \begin_layout Section
 Zadanie 6
+\end_layout
+
+\begin_layout Standard
+Zadanie polegało na przetestowaniu kolejnego równania rekurencyjnego postaci
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n+1}:=x_{n}^{2}+c
+\]
+
+\end_inset
+
+dla n = 1,2..
+ , gdzie c jest pewną stałą.
+ W zadaniu należało przeprowadzić po 40 iteracji dla poniższych danych:
+\end_layout
+
+\begin_layout Enumerate
+c = −2 i x
+\begin_inset Formula $_{0}$
+\end_inset
+
+ = 1
+\end_layout
+
+\begin_layout Enumerate
+c = −2 i x
+\begin_inset Formula $_{0}$
+\end_inset
+
+ = 2
+\end_layout
+
+\begin_layout Enumerate
+c = −2 i x
+\begin_inset Formula $_{0}$
+\end_inset
+
+ = 1.99999999999999
+\end_layout
+
+\begin_layout Enumerate
+c = −1 i x
+\begin_inset Formula $_{0}$
+\end_inset
+
+ = 1
+\end_layout
+
+\begin_layout Enumerate
+c = −1 i x
+\begin_inset Formula $_{0}$
+\end_inset
+
+ = -1
+\end_layout
+
+\begin_layout Enumerate
+c = −1 i x
+\begin_inset Formula $_{0}$
+\end_inset
+
+= 0.75
+\end_layout
+
+\begin_layout Enumerate
+c = −1 i x
+\begin_inset Formula $_{0}$
+\end_inset
+
+ = 0.25
+\end_layout
+
+\begin_layout Standard
+Wyniki przedstawię
+\begin_inset space \space{}
+\end_inset
+
+w postaci wykresów:
+\end_layout
+
+\begin_layout Standard
+1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphs/Figure_1.svg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphs/Figure_2.svg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphs/Figure_3.svg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4 i 5.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphs/Figure_4.svg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphs/Figure_6.svg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphs/Figure_7.svg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podobnie jak w poprzednim zadaniu zaburzenie wywołało niedorzeczne wyniki.
+ Jednak pojawiły się one tylko przy teście numer 3 (x
+\begin_inset Formula $_{0}$
+\end_inset
+
+ = 1.99999999999999 i c =-2).
+ Odchylenie od 2 wyniosło tu 10
+\begin_inset Formula $^{-14}$
+\end_inset
+
+i po około 20 iteracjach zaczęło się
+\begin_inset space \space{}
+\end_inset
+
+widocznie psuć.
+ Stało się
+\begin_inset space \space{}
+\end_inset
+
+tak, ponieważ zaburzenie było bliskie precyzji arytmetyki i błąd szybko
+ przeniósł się na następne iteracje.
+ W reszcie testów nie było takich zaburzeń więc uzyskane tam wyniki można
+ uznać za poprawne.
 \end_layout
 
 \end_body
