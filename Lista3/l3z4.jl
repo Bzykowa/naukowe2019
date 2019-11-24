@@ -1,5 +1,5 @@
 #Karolina Bąk
-#l3z4.jl
+#l3z4.jl Lista 3 Zadanie 4
 
 push!(LOAD_PATH, pwd())
 using PolyMethods
