@@ -1,0 +1,570 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Sprawozdanie z listy trzeciej
+\end_layout
+
+\begin_layout Author
+Karolina Bąk
+\end_layout
+
+\begin_layout Date
+Listopad 2019
+\end_layout
+
+\begin_layout Section
+Zadanie 1
+\end_layout
+
+\begin_layout Standard
+Celem zadania było zaimplementowanie metody bisekcji do rozwiązywania f(x)=0.
+ Funkcja miała spełniać poniższą specyfikację:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dane:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ - f(x) jako anonimowa funkcja
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{a,b}$
+\end_inset
+
+ - końce przedziału początkowego
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{delta,epsilon}$
+\end_inset
+
+ - dokładności obliczeń
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wyniki:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ - przybliżenie pierwiastka
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ - wartość f(r)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{it}$
+\end_inset
+
+ - ilość iteracji
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{err}$
+\end_inset
+
+ - błąd
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ - brak
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{1}$
+\end_inset
+
+ - funkcja nie zmienia znaku w [a,b]
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Opis algorytmu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Na początku przypisuję wartości końców odcinka do zmiennych u i w, a długość
+ odcinka do e.
+ Jeśli znaki zmiennych u i w są takie same zwracam błąd (1), gdyż nie można
+ wtedy zagwarantować, że gdzieś w tym przedziale będzie pierwiastek funkcji.
+ W przeciwnym razie metodę można stosować, gdyż przy funkcji ciągłej jest
+ pewne, że gdzieś w tym przedziale będzie wartość f(x) równa 0.
+ Następnie w pętli zmniejszam przeszukiwany odcinek o połowę, sprawdzając
+ środkową wartość w odcinku.
+ Jeśli jest ona poprawna zgodnie z narzuconą dokładnością zwracam wynik.
+ Jeśli nie to sprawdzam jej znak ze znakiem wartości funkcji na początku
+ odcinka.
+ Jeśli są różne to szukam dalej pierwiastka w pierwszej połowie odcinka.
+ Jeśli nie to szukam pierwiastka w drugiej połowie.
+ Powtarzam proces dopóki nie trafię na poprawny (w granicy błędu) wynik.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pseudokod:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+0.
+ M - bezpiecznik przeciwko nieskończonej pętli - typemax(Int32)
+\end_layout
+
+\begin_layout Plain Layout
+1.
+ u = f(a); w = f(b);
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ e = b-a
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ 
+\begin_inset Formula $\mathbf{if}$
+\end_inset
+
+ sign(u) == sign(w)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset Formula $\mathbf{return}$
+\end_inset
+
+(a,u,0,1)
+\end_layout
+
+\begin_layout Plain Layout
+4.
+ 
+\begin_inset Formula $\mathbf{for}$
+\end_inset
+
+ it in 1:M
+\end_layout
+
+\begin_layout Plain Layout
+4.1 e = e/2
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+c = a+e
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+v = f(c)
+\end_layout
+
+\begin_layout Plain Layout
+4.2 
+\begin_inset Formula $\mathbf{if}$
+\end_inset
+
+ |e| < delta 
+\begin_inset Formula $\mathbf{or}$
+\end_inset
+
+ |v| < epsilon
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+
+\begin_inset Formula $\mathbf{return}$
+\end_inset
+
+(c,v,it,0)
+\end_layout
+
+\begin_layout Plain Layout
+4.3 
+\begin_inset Formula $\mathbf{if}$
+\end_inset
+
+ sign(v) != sign(u)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+b = c
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+w = v
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{else}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+a = c
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+u = v
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Zadanie 2
+\end_layout
+
+\begin_layout Standard
+Celem zadania było zaimplementowanie metody Newtona do rozwiązywania f(x)=0.
+ Funkcja miała spełniać poniższą specyfikację:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dane:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ - f(x) jako anonimowa funkcja
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{pf}$
+\end_inset
+
+ - f'(x) jako anonimowa funkcja
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{x0}$
+\end_inset
+
+ - przybliżenie początkowe
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{delta,epsilon}$
+\end_inset
+
+ - dokładności obliczeń
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{maxit}$
+\end_inset
+
+ - maksymalna liczba iteracji
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wyniki:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ - przybliżenie pierwiastka
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ - wartość f(r)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{it}$
+\end_inset
+
+ - ilość iteracji
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{err}$
+\end_inset
+
+ - błąd
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ - metoda zbieżna
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{1}$
+\end_inset
+
+ - nie znaleziono wyniku w maxit iteracji
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{2}$
+\end_inset
+
+ - pochodna bliska zeru
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Opis algorytmu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Na początku działania funkcji sprawdzam, czy udało się trafić w pierwiastek
+ przy warunkach początkowych.
+ Jeśli tak, to zwracam tą wartość.
+ Jeśli nie, kontynuuję.
+ Rozpoczynam pętle od 1 do maxit, w której na początku sprawdzam czy pochodna
+ w x0 jest mniejsza niż wymagana dokładność.
+ Jeśli tak, to przyjmuję, że jest bliżej zera niż powinna i zwracam błąd
+ (2).
+ Następnie obliczam następny x, czyli x1 równy 
+\begin_inset Formula $x0-\frac{f(x0)}{f'(x0)}$
+\end_inset
+
+.
+ Potem sprawdzam czy x1 jest dobrym przybliżeniem pierwiastka.
+ Jeśli tak, to zwracam uzyskaną wartość.
+ Jeśli nie, to za x0 podstawiam x1 i kontynuuję poszukiwania.
+ Jeśli po maxit iteracji nie uda mi się uzyskać odpowiedniego wyniku, zwracam
+ błąd (1).
+\end_layout
+
+\end_body
+\end_document
