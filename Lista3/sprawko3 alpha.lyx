@@ -994,5 +994,94 @@ x0 = x0-fx0*s; fx0 = f(x0)
 Zadanie 4
 \end_layout
 
+\begin_layout Standard
+Celem zadania było zastosowanie zaimplementowanych wcześniej metod do znalezieni
+a pierwiastka równania 
+\begin_inset Formula $\sin(x)-(\frac{1}{2}x)^{2}=0$
+\end_inset
+
+.
+ Deltę i epsilon w każdej metodzie ustawiłam na 
+\begin_inset Formula $\frac{1}{2}10^{-5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ Metoda bisekcji dla przedziału [1.5, 2] zwraca:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(r=1.9337539672851562,v=-2.7027680138402843e-7,it=16,err=0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Metoda Newtona z x0 = 1.5 zwraca:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(r=1.933753779789742,v=-2.2423316314856834e-8,it=4,err=0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Metoda siecznych z x0 = 1 i x1 = 2 zwraca: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(r=1.933753644474301,v=1.564525129449379e-7,it=4,err=0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wszystkie metody zwróciły ten sam pierwiastek z dokładnością do 10
+\begin_inset Formula $^{-6},$
+\end_inset
+
+więc każda z nich uzyskała poprawny wynik dla podanych dokładności.
+ Najszybsza i najbardziej dokładna była metoda Newtona, a najwolniejsza
+ i najmniej dokładna metoda bisekcji.
+ Dzieje się tak, ponieważ metoda bisekcji zawsze zgaduje, że pierwiastkiem
+ jest środek zawężanego przedziału, w przeciwieństwie do innych metod, które
+ przybliżają pierwiastek, upraszczając wykres funkcji.
+ Metoda bisekcji jest jednak bezpieczniejsza od innych metod z tego zadania,
+ ponieważ nie może być rozbieżna.
+ 
+\end_layout
+
+\begin_layout Section
+Zadanie 5
+\end_layout
+
 \end_body
 \end_document
