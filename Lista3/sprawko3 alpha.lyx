@@ -205,18 +205,17 @@ Opis algorytmu:
 \begin_layout Standard
 Na początku przypisuję wartości końców odcinka do zmiennych u i w, a długość
  odcinka do e.
- Jeśli znaki zmiennych u i w są takie same zwracam błąd (1), gdyż nie można
+ Jeśli znaki zmiennych u i w są takie same, zwracam błąd (1), gdyż nie można
  wtedy zagwarantować, że gdzieś w tym przedziale będzie pierwiastek funkcji.
- W przeciwnym razie metodę można stosować, gdyż przy funkcji ciągłej jest
- pewne, że gdzieś w tym przedziale będzie wartość f(x) równa 0.
+ W przeciwnym razie metoda działa dla funkcji ciągłych.
  Następnie w pętli zmniejszam przeszukiwany odcinek o połowę, sprawdzając
  środkową wartość w odcinku.
- Jeśli jest ona poprawna zgodnie z narzuconą dokładnością zwracam wynik.
- Jeśli nie to sprawdzam jej znak ze znakiem wartości funkcji na początku
+ Jeśli jest ona poprawna zgodnie z narzuconą dokładnością, zwracam wynik.
+ Jeśli nie, to sprawdzam jej znak ze znakiem wartości funkcji na początku
  odcinka.
- Jeśli są różne to szukam dalej pierwiastka w pierwszej połowie odcinka.
- Jeśli nie to szukam pierwiastka w drugiej połowie.
- Powtarzam proces dopóki nie trafię na poprawny (w granicy błędu) wynik.
+ Jeśli są różne, to szukam dalej pierwiastka w pierwszej połowie odcinka.
+ Jeśli nie, szukam pierwiastka w drugiej połowie.
+ Powtarzam proces, dopóki nie trafię na poprawny (w granicy błędu) wynik.
 \end_layout
 
 \begin_layout Standard
@@ -401,10 +400,6 @@ a = c
 u = v
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -554,7 +549,8 @@ Na początku działania funkcji sprawdzam, czy udało się trafić w pierwiastek
  w x0 jest mniejsza niż wymagana dokładność.
  Jeśli tak, to przyjmuję, że jest bliżej zera niż powinna i zwracam błąd
  (2).
- Następnie obliczam następny x, czyli x1 równy 
+ Następnie obliczam następny x, czyli x1 (punkt przecięcia stycznej do funkcji
+ w x0 z osią OX) równy 
 \begin_inset Formula $x0-\frac{f(x0)}{f'(x0)}$
 \end_inset
 
@@ -564,6 +560,438 @@ Na początku działania funkcji sprawdzam, czy udało się trafić w pierwiastek
  Jeśli nie, to za x0 podstawiam x1 i kontynuuję poszukiwania.
  Jeśli po maxit iteracji nie uda mi się uzyskać odpowiedniego wyniku, zwracam
  błąd (1).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pseudokod:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+1.
+ v = f(x0);
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ 
+\begin_inset Formula $\mathbf{if}$
+\end_inset
+
+ |v| < epsilon
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,$
+\end_inset
+
+
+\begin_inset Formula $\mathbf{return}$
+\end_inset
+
+(x0,v,0,0)
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ 
+\begin_inset Formula $\mathbf{for}$
+\end_inset
+
+ it in 1:maxit
+\end_layout
+
+\begin_layout Plain Layout
+3.1 fprim = pf(x0)
+\end_layout
+
+\begin_layout Plain Layout
+3.2 
+\begin_inset Formula $\mathbf{if}$
+\end_inset
+
+ |fprim| < delta
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+
+\begin_inset Formula $\mathbf{return}$
+\end_inset
+
+(x0,v,it,2)
+\end_layout
+
+\begin_layout Plain Layout
+3.3 x1 = x0-v/fprim
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+v = f(x1)
+\end_layout
+
+\begin_layout Plain Layout
+3.4 
+\begin_inset Formula $\mathbf{if}$
+\end_inset
+
+ |x1-x0| < delta 
+\begin_inset Formula $\mathbf{or}$
+\end_inset
+
+ |v| < epsilon
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+
+\begin_inset Formula $\mathbf{return}$
+\end_inset
+
+(x1,v,it,0)
+\end_layout
+
+\begin_layout Plain Layout
+3.5 x0 = x1
+\end_layout
+
+\begin_layout Plain Layout
+4.
+ 
+\begin_inset Formula $\mathbf{return}$
+\end_inset
+
+(x1,v,maxit,1)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Zadanie 3
+\end_layout
+
+\begin_layout Standard
+Celem zadania było zaimplementowanie metody siecznych do rozwiązywania f(x)=0.
+ Funkcja miała spełniać poniższą specyfikację:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dane:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ - f(x) jako anonimowa funkcja
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{x0,x1}$
+\end_inset
+
+ - przybliżenia początkowe
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{delta,epsilon}$
+\end_inset
+
+ - dokładności obliczeń
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{maxit}$
+\end_inset
+
+ - maksymalna liczba iteracji
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wyniki:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ - przybliżenie pierwiastka
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ - wartość f(r)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{it}$
+\end_inset
+
+ - ilość iteracji
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{err}$
+\end_inset
+
+ - błąd
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ - metoda zbieżna
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{1}$
+\end_inset
+
+ - nie znaleziono rozwiązania w maxit iteracji
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Opis algorytmu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zaczynam od ustalenia wartości funkcji dla punktów przybliżających.
+ Potem zaczynam pętle od 1 do maxit.
+ Jeśli |f(x0)| jest większe od |f(x1)| to zamieniam miejscami wartości zmiennych
+ x0 oraz x1.
+ Następnie wyliczam s równe 
+\begin_inset Formula $\frac{x1-x0}{f(x1)-f(x0)}$
+\end_inset
+
+, które jest przybliżeniem pochodnej f(x), co pozwoli mi obliczyć następne
+ x0 równe 
+\begin_inset Formula $x0-f(x0)*s$
+\end_inset
+
+, które jest miejscem gdzie sieczna przechodząca przez x0 i x1 przecina
+ oś OX.
+ Następne x1 to stare x0.
+ W kolejnym kroku sprawdzam, czy udało mi się przybliżyć pierwiastek.
+ Jeśli tak, to zwracam uzyskany wynik.
+ W przeciwnym razie kontynuuję obliczenia.
+ Jeśli nie uda się znaleźć rozwiązania w maxit iteracji, zwracam błąd (1).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phantom{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pseudokod:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+1.
+ fx0 = f(x0); fx1 = f(x1)
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ 
+\begin_inset Formula $\mathbf{for}$
+\end_inset
+
+ it in 1:maxit
+\end_layout
+
+\begin_layout Plain Layout
+2.1 
+\begin_inset Formula $\mathbf{if}$
+\end_inset
+
+ |fx0| > |fx1|
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+
+\begin_inset Formula $\mathbf{swap}$
+\end_inset
+
+(x0,x1)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+
+\begin_inset Formula $\mathbf{swap}$
+\end_inset
+
+(fx0,fx1)
+\end_layout
+
+\begin_layout Plain Layout
+2.2 s = (x1-x0)/(fx1-fx0)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+x1 = 0; fx1 = fx0
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+x0 = x0-fx0*s; fx0 = f(x0)
+\end_layout
+
+\begin_layout Plain Layout
+2.3 
+\begin_inset Formula $\mathbf{if}$
+\end_inset
+
+ |x1-x0| < delta 
+\begin_inset Formula $\mathbf{or}$
+\end_inset
+
+ |fx0| < epsilon
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $\,\,$
+\end_inset
+
+
+\begin_inset Formula $\mathbf{return}$
+\end_inset
+
+(x0,fx0,it,0)
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ 
+\begin_inset Formula $\mathbf{return}$
+\end_inset
+
+(x0,fx0,maxit,1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Zadanie 4
 \end_layout
 
 \end_body
