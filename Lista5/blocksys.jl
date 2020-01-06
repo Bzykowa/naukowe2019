@@ -34,7 +34,7 @@ module blocksys
         temp = readdlm(path)
         b_tmp = Float64[]
         for i in 2:length(temp)
-            push!(b, temp[i])
+            push!(b_tmp, temp[i])
         end
         global b = (b = b_tmp, n = Int(temp[1]))
         return b
@@ -221,7 +221,7 @@ module blocksys
         #vector b after multiplying by saved mults
         mod_b = vec(zeros(n))
 
-        #solve lower matrix
+        #solve upper matrix
         for i in 1:n
             row_sum = Float64(0.)
 
@@ -253,7 +253,7 @@ module blocksys
         #vector b after multiplying by saved mults
         mod_b = vec(zeros(n))
 
-        #solve lower matrix
+        #solve upper matrix
         for i in 1:n
             row_sum = Float64(0.)
 
